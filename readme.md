@@ -1,0 +1,1 @@
+Record the process of practicing on leetcode

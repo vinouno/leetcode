@@ -1,6 +1,7 @@
 // @before-stub-for-debug-begin
 #include <vector>
 #include <string>
+#include <unordered_set>
 
 using namespace std;
 // @before-stub-for-debug-end
@@ -23,8 +24,9 @@ using namespace std;
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-         ListNode* fast = head;
-         ListNode* slow = head;
+        /*
+        ListNode* fast = head;
+        ListNode* slow = head;
         while (true) {
             if (fast == NULL || fast->next == NULL) return NULL;
             fast = fast->next->next;
@@ -37,6 +39,18 @@ public:
             fast = fast->next;
         }
         return fast;
+        */
+        unordered_set<ListNode *> visited;
+        while(head != nullptr)
+        {
+            if(visited.count(head)) //返回head出现的次数
+            {
+                return head;
+            }
+            visited.insert(head);
+            head = head->next;
+        }
+        return nullptr;
     }
 };
 // @lc code=end

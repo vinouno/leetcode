@@ -21,7 +21,7 @@ public:
         for (int num1 = 0; num1 < nums.size() - 2; num1++)
         {
             if(num1 > 0 && nums[num1] == nums[num1 - 1])
-            continue;
+            continue;   //去重
             int num2 = num1 + 1;
             int num3 = nums.size() - 1;
             while (num2 < num3)

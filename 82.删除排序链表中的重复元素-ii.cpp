@@ -30,13 +30,13 @@ public:
         temp->next = head;
         ListNode* slowIndex = temp;
         ListNode* fastIndex = head;
-        while(fastIndex != NULL && fastIndex->next)
+        while(fastIndex != nullptr && fastIndex->next)
         {
             int value = fastIndex->val;
             fastIndex = fastIndex->next;
             if(value == fastIndex->val)
             {
-                while(fastIndex != NULL && fastIndex->val == value)
+                while(fastIndex != nullptr && fastIndex->val == value)
                 {
                     slowIndex->next = fastIndex->next;
                     ListNode* d = fastIndex;

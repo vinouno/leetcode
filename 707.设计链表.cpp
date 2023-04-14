@@ -1,6 +1,7 @@
 // @before-stub-for-debug-begin
 #include <vector>
 #include <string>
+#include <iostream>
 
 using namespace std;
 // @before-stub-for-debug-end
